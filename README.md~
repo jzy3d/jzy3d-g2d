@@ -20,13 +20,11 @@ Disclaimer:
 Jzy3d G2D is only a proof of concept showing how to build 3d charts based on Java2d.
 
 Although not exhaustive, here is a list of feature not supported/explored:
+- mouse controller on a standard frame allowing to update viewpoint
+- text renderers
+- axe box
+- colorbars
 
-<ul>
-<li>mouse controller on a standard frame allowing to update viewpoint
-<li>text renderers
-<li>axe box
-<li>colorbars
-</ul>
 
 
 

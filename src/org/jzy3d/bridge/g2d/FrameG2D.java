@@ -1,4 +1,4 @@
-package org.jzy3d.sandbox.g2d;
+package org.jzy3d.bridge.g2d;
 
 import java.awt.Rectangle;
 import java.awt.event.WindowAdapter;

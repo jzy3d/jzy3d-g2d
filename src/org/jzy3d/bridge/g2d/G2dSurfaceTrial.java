@@ -2,7 +2,7 @@ package org.jzy3d.bridge.g2d;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Rectangle;
+import org.jzy3d.maths.Rectangle;
 import java.io.IOException;
 import java.util.List;
 
@@ -11,7 +11,7 @@ import org.jzy3d.chart.Chart;
 import org.jzy3d.chart.controllers.mouse.camera.CameraMouseController;
 import org.jzy3d.chart.controllers.mouse.camera.CameraMouseControllerNewt;
 import org.jzy3d.chart.controllers.mouse.camera.ICameraMouseController;
-import org.jzy3d.chart.factories.ChartComponentFactory;
+import org.jzy3d.chart.factories.AWTChartComponentFactory;
 import org.jzy3d.chart.factories.IChartComponentFactory;
 import org.jzy3d.colors.Color;
 import org.jzy3d.colors.ColorMapper;
@@ -99,7 +99,7 @@ public class G2dSurfaceTrial {
     }
 
     private static IChartComponentFactory getFactory() {
-        IChartComponentFactory f = new ChartComponentFactory() {
+        IChartComponentFactory f = new AWTChartComponentFactory() {
             @Override
             public ICameraMouseController newMouseController(Chart chart) {
                 ICameraMouseController mouse = null;

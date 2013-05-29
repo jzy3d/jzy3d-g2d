@@ -1,6 +1,6 @@
 package org.jzy3d.bridge.g2d;
 
-import java.awt.Rectangle;
+import org.jzy3d.maths.Rectangle;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
@@ -12,7 +12,7 @@ public class FrameG2D extends java.awt.Frame {
 		this.setTitle(title + "[AWT]");
 		this.add(panel);
 		this.pack();
-		this.setBounds(bounds);
+		this.setBounds(new java.awt.Rectangle(bounds.x, bounds.y, bounds.width, bounds.height));
 		this.setVisible(true);
 
 		this.addWindowListener(new WindowAdapter() {

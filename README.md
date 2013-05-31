@@ -1,6 +1,8 @@
 jzy3d-g2d
 =========
 
+This project is part of a <a href="https://github.com/jzy3d/jzy3d-master">multi-modules project</a>
+
 A Jzy3d tool allowing to deploy Java2d based 3d charts.
 
 This project is here for two reasons:

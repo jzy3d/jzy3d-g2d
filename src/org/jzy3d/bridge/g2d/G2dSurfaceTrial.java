@@ -8,8 +8,8 @@ import java.util.List;
 
 import org.jzy3d.bridge.awt.DoubleBufferedPanelAWT;
 import org.jzy3d.chart.Chart;
-import org.jzy3d.chart.controllers.mouse.camera.CameraMouseController;
-import org.jzy3d.chart.controllers.mouse.camera.CameraMouseControllerNewt;
+import org.jzy3d.chart.controllers.mouse.camera.AWTCameraMouseController;
+import org.jzy3d.chart.controllers.mouse.camera.NewtCameraMouseController;
 import org.jzy3d.chart.controllers.mouse.camera.ICameraMouseController;
 import org.jzy3d.chart.factories.AWTChartComponentFactory;
 import org.jzy3d.chart.factories.IChartComponentFactory;
@@ -104,14 +104,14 @@ public class G2dSurfaceTrial {
             public ICameraMouseController newMouseController(Chart chart) {
                 ICameraMouseController mouse = null;
                 if (!chart.getWindowingToolkit().equals("newt"))
-                    mouse = new CameraMouseController(chart) {
+                    mouse = new AWTCameraMouseController(chart) {
                         public void rotate(Coord2d move) {
                             super.rotate(move);
                             panel.repaint();
                         }
                     };
                 else
-                    mouse = new CameraMouseControllerNewt(chart);
+                    mouse = new NewtCameraMouseController(chart);
                 return mouse;
             }
         };

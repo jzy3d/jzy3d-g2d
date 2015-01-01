@@ -1,10 +1,10 @@
 package org.jzy3d.bridge.g2d;
 
-import org.jzy3d.maths.Rectangle;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 import org.jzy3d.bridge.awt.DoubleBufferedPanelAWT;
+import org.jzy3d.maths.Rectangle;
 
 public class FrameG2D extends java.awt.Frame {
 	public FrameG2D(DoubleBufferedPanelAWT panel, Rectangle bounds, String title) {

@@ -2,15 +2,14 @@ package org.jzy3d.bridge.g2d;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import org.jzy3d.maths.Rectangle;
 import java.io.IOException;
 import java.util.List;
 
 import org.jzy3d.bridge.awt.DoubleBufferedPanelAWT;
 import org.jzy3d.chart.Chart;
 import org.jzy3d.chart.controllers.mouse.camera.AWTCameraMouseController;
-import org.jzy3d.chart.controllers.mouse.camera.NewtCameraMouseController;
 import org.jzy3d.chart.controllers.mouse.camera.ICameraMouseController;
+import org.jzy3d.chart.controllers.mouse.camera.NewtCameraMouseController;
 import org.jzy3d.chart.factories.AWTChartComponentFactory;
 import org.jzy3d.chart.factories.IChartComponentFactory;
 import org.jzy3d.colors.Color;
@@ -19,6 +18,7 @@ import org.jzy3d.colors.colormaps.ColorMapRainbow;
 import org.jzy3d.maths.Coord2d;
 import org.jzy3d.maths.Coord3d;
 import org.jzy3d.maths.Range;
+import org.jzy3d.maths.Rectangle;
 import org.jzy3d.maths.TicToc;
 import org.jzy3d.plot3d.builder.Builder;
 import org.jzy3d.plot3d.builder.Mapper;

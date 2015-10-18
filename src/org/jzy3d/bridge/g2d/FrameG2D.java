@@ -7,7 +7,12 @@ import org.jzy3d.bridge.awt.DoubleBufferedPanelAWT;
 import org.jzy3d.maths.Rectangle;
 
 public class FrameG2D extends java.awt.Frame {
-	public FrameG2D(DoubleBufferedPanelAWT panel, Rectangle bounds, String title) {
+	/**
+     * 
+     */
+    private static final long serialVersionUID = -2306174707071996721L;
+
+    public FrameG2D(DoubleBufferedPanelAWT panel, Rectangle bounds, String title) {
 		this.panel = panel;
 		this.setTitle(title + "[AWT]");
 		this.add(panel);
@@ -16,7 +21,8 @@ public class FrameG2D extends java.awt.Frame {
 		this.setVisible(true);
 
 		this.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent e) {
+			@Override
+            public void windowClosing(WindowEvent e) {
 				FrameG2D.this.remove(FrameG2D.this.panel);
 				FrameG2D.this.dispose();
 			}

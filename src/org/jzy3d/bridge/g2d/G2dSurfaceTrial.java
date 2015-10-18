@@ -32,6 +32,7 @@ public class G2dSurfaceTrial {
     public static void main(String[] args) throws IOException, InterruptedException {
         chart = getSurfaceChart(Quality.Intermediate, "awt");// HistogramDemo.getChart();
         panel = new DoubleBufferedPanelAWT() {
+            @Override
             public void draw(Graphics g) {
                 // draw bg
                 Graphics2D g2d = (Graphics2D) g;
@@ -77,6 +78,7 @@ public class G2dSurfaceTrial {
 
     public static Chart getSurfaceChart(Quality quality, String type) {
         Mapper mapper = new Mapper() {
+            @Override
             public double f(double x, double y) {
                 return 10 * Math.sin(x / 10) * Math.cos(y / 20) * x;
             }
@@ -105,6 +107,7 @@ public class G2dSurfaceTrial {
                 ICameraMouseController mouse = null;
                 if (!chart.getWindowingToolkit().equals("newt"))
                     mouse = new AWTCameraMouseController(chart) {
+                        @Override
                         public void rotate(Coord2d move) {
                             super.rotate(move);
                             panel.repaint();

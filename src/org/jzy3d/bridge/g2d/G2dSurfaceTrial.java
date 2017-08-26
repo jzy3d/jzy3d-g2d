@@ -30,7 +30,9 @@ import org.jzy3d.plot3d.rendering.canvas.Quality;
 
 public class G2dSurfaceTrial {
     public static void main(String[] args) throws IOException, InterruptedException {
-        chart = getSurfaceChart(Quality.Intermediate, "awt");// HistogramDemo.getChart();
+        Quality q = Quality.Intermediate;
+        q.setPreserveViewportSize(true);
+        chart = getSurfaceChart(q, "awt");// HistogramDemo.getChart();
         panel = new DoubleBufferedPanelAWT() {
             @Override
             public void draw(Graphics g) {
@@ -103,7 +105,7 @@ public class G2dSurfaceTrial {
     private static IChartComponentFactory getFactory() {
         IChartComponentFactory f = new AWTChartComponentFactory() {
             @Override
-            public ICameraMouseController newMouseController(Chart chart) {
+            public ICameraMouseController newMouseCameraController(Chart chart) {
                 ICameraMouseController mouse = null;
                 if (!chart.getWindowingToolkit().equals("newt"))
                     mouse = new AWTCameraMouseController(chart) {
@@ -128,7 +130,7 @@ public class G2dSurfaceTrial {
     /***********************************************************/
 
     public static void openChart(Chart chart, Rectangle bounds, String title) {
-        chart.addMouseController();
+        chart.addMouseCameraController();
         chart.open(title, bounds);
     }
 
